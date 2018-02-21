@@ -36,6 +36,10 @@ module.exports = (options) => ({
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.less$/,
+        loader: 'style!css!less-loader',
+      },
+      {
         // Preprocess 3rd party .css files located in node_modules
         test: /\.css$/,
         include: /node_modules/,
